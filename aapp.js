@@ -8,7 +8,7 @@
 
   NarrowItmenudownController.$inject = ['MenuSearchService'];
   function NarrowItmenudownController(MenuSearchService) {
-    var menumenudown = this;
+    var menudown = this;
     menudown.searchMenu = "";
     menudown.found = [];
     menudown.error = false;
@@ -47,7 +47,7 @@
 
   function FoundItems() {
     var ddo = {
-      templateUrl: 'foundItems.html',
+      templateUrl: 'itemsloaderindicator.template.html',
       scope: {
         found: '<',
         onRemove: '&'
