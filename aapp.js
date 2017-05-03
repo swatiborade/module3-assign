@@ -1,8 +1,8 @@
 (function() {
   'use strinct';
 
-  angular.module('NarrowItmenudownApp', [])
-  .controller('NarrowItmenudownController', NarrowItmenudownController)
+  angular.module("NarrowItmenudownApp", [])
+  .controller("NarrowItmenudownController", NarrowItmenudownController)
   .service('MenuSearchService', MenuSearchService)
   .directive('foundItems', FoundItems);
 
