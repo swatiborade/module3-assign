@@ -1,29 +1,28 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <script src="angular.min.js"></script>
-    <script src="aapp.js"></script>
     <title>Narrow Down Your Menu Choice</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/styles.css">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
   </head>
 <body ng-app="NarrowItDownApp">
    <div class="container" ng-controller="NarrowItDownController as menudown">
     <h1>Narrow Down Your Chinese Menu Choice</h1>
 
     <div class="form-group">
-      <input type="text" placeholder="search term" class="form-control" ng-model="menudown.searchMenu">
+      <input type="text" placeholder="search term" class="form-control" ng-model="menudown.searchTerm">
     </div>
     <div class="form-group narrow-button">
-      <button class="btn btn-primary" ng-click="menudown.getResults()">Narrow It Down For Me!</button>
+      <button class="btn btn-primary" ng-click="menudown.narrow()">Narrow It Down For Me!</button>
     </div>
 
     <!-- found-items should be implemented as a component -->
-    <found-items found="menudown.found" on-remove="menudown.removeItem(index)"></found-items>
+    <found-items found="menudown.items" on-remove="menudown.removeItem(index)"></found-items>
 
-    <div class="row" ng-if="menudown.error"> Nothing found </div>
-  </div>
+</div>
 
 </body>
 </html>
